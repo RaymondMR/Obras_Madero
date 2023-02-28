@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% load my_filters %} {% block content %}
+
+<div class="border round">
+  <h6 class="my-5">{{obra.nombre_obra}}</h6>
+  <p>ObraID: {{obra.id}}</p>
+  <p>Monto de Obra: {{obra.costo_total }}</p>
+  <p>Localidad: {{obra.col_comunidad}}</p>
+  <p>Rubro de Gasto: {{obra.rubro}}</p>
+  <p>Subclasificacion: {{obra.subclasificacion}}</p>
+  <p>Tenencia: {{obra.tenencia}}</p>
+  <p>Modalidad de Ejecución: {{obra.modalidad_ejecucion}}</p>
+  <p>Metas Cantidad: {{obra.metas_cantidad}}</p>
+  <p>Metas Unidad: {{obra.metas_unidad}}</p>
+  <p>Metas Beneficiarios: {{obra.metas_beneficiarios}}</p>
+  <p>Inversion Estatal: {{obra.inv_estatal}}</p>
+  <p>Inversion Federal: {{obra.inv_federal}}</p>
+  <p>FISM: {{obra.fism}}</p>
+</div>
+{% endblock %}

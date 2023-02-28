@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% load my_filters %} {% block content %}
+<h1 class="my-5">Lista de Obras:</h1>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+    {% for obra in obras %}
+    <div class="col">
+      {% if obra.modalidad_ejecucion == 'CONTRATO' %}
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <p class="text-warning">Obra: {{obra.id}}</p>
+          <a
+            href="{% url 'obra_detail' pk=obra.id %}"
+            class="text-white text-decoration-none"
+            ><p class="font-weight-bold">{{obra.nombre_obra}}</p></a
+          >
+          <p>Monto de Obra: {{obra.costo_total}}</p>
+        </div>
+      </div>
+      {% else %}
+      <div class="card">
+        <div class="card-body">
+          <p class="text-primary">Obra: {{obra.id}}</p>
+          <a
+            href="{% url 'obra_detail' pk=obra.id %}"
+            class="text-primary text-decoration-none"
+            ><p class="font-weight-bold">{{obra.nombre_obra}}</p></a
+          >
+          <p class="text-primary">Monto de Obra: {{obra.costo_total}}</p>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
