@@ -1,21 +1,79 @@
 {% extends "base.html" %} {% block content %}
-<h1>Welcome to Obras Madero !</h1>
-<p>El Dia de hoy: {{today}}</p>
-<a href="{% url 'obras.list' %}" class="btn btn-primary">Ver Obras>></a>
-<p class="p-1">
-  <span style="font-weight: bold">Nuestra misión:</span> Mejorar la calidad de
-  vida de las Colonias y Comunidades, de nuestro Municipio de Madero a través de
-  estrategias efectivas de Obras Públicas, Planificación y Urbanismo.
-</p>
-<p class="p-1">
-  Nos esforzamos por crear entornos seguros, sostenibles y equitativos que
-  promuevan el crecimiento económico y mejoren el bienestar de nuestros
-  ciudadanos.
-</p>
-<p class="p-1">
-  Esta Dirección de Obras Públicas, Planificación y Urbanismo, se dedica a
-  brindar soluciones oportunas, innovadoras y rentables que satisfagan las
-  necesidades cambiantes de nuestras diversas comunidades.
-</p>
+<section class="bg-dark text-light p-5 text-center text-sm-start">
+  <div class="container">
+    <div class="d-sm-flex m-2 align-items-center justify-content-between">
+      <div class="p-4">
+        <h3 class="m-2">Bienvenido a Obras Madero !</h3>
+        <hr />
+        <p class="p-1 my-2">
+          <span style="font-weight: bold; color: #f70909">Nuestra misión:</span>
+          Mejorar la calidad de vida de las Colonias y Comunidades, de nuestro
+          Municipio de Madero a través de estrategias efectivas de Obras
+          Públicas, Planificación y Urbanismo.
+        </p>
+        <p class="p-1 my-2">
+          Nos esforzamos por crear entornos seguros, sostenibles y equitativos
+          que promuevan el crecimiento económico y mejoren el bienestar de
+          nuestros ciudadanos.
+        </p>
+        <p class="p-1 my-2">
+          Esta Dirección de Obras Públicas, Planificación y Urbanismo, se dedica
+          a brindar soluciones oportunas, eficientes, innovadoras y rentables
+          que satisfagan las necesidades cambiantes de nuestras diversas
+          comunidades.
+        </p>
+        <hr />
+        <div class="mx-auto" style="width: 200px">
+          <a href="{% url 'obras.list' %}" class="btn btn-primary btn-lg"
+            >Ver Obras 2023>></a
+          >
+        </div>
+      </div>
+      <img
+        class="img-fluid w-40"
+        src="../../../static/obras/img/Obras01.jpg"
+        alt="Imagen de Obra Publica"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Boxes -->
+<section class="p-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="../../../static/obras/img/Yonny.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Presidente Municipal</h5>
+            <p class="card-text">C. Yonny Alcauter Ibarra</p>
+            <p class="card-text">H. Ayuntamiento de Madero, 2021-2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="../../../static/obras/img/Arq Pepe.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              Director de Obras Públicas, Planeación y Urbanismo
+            </h5>
+            <p class="card-text">Arq. Jose Guadalupe Cortes Ortega</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

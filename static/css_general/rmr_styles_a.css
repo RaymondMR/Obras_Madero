@@ -69,3 +69,12 @@ body {
     display: none;
   }
 }
+
+.rmbody01 {
+  background: white;
+  padding: 0.5em 0.5em;
+  margin: 0.5em 0.5em;
+  border-radius: 1em;
+  text-align: center;
+  color: blue;
+}
