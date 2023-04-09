@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<div style="margin: 80px auto; width: 600px; text-align: center">
+  <h1>Area restringida, solo usuarios registrados</h1>
+  <p>Por favor ingresa con tu usuario y contraseña</p>
+  <p>para acceder a esta area</p>
+
+  <button class="btn btn-primary">
+    <a href="{% url 'login' %}" class="text-white">Ir a Login</a>
+  </button>
+</div>
+{% endblock %}

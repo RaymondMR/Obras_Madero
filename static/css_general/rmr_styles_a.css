@@ -1,0 +1,80 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-contenedor {
+  width: 90%;
+  padding: 10px;
+  max-width: 1200;
+  background-color: darkgrey;
+  margin: 60px auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr, 50px;
+
+  grid-template-areas:
+    "contenido contenido contenido sidebar"
+    "footer footer footer footer";
+}
+
+.main-contenedor .contenido,
+.main-contenedor .sidebar,
+.main-contenedor .footer {
+  background-color: darkgrey;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+.main-contenedor .contenido {
+  grid-area: contenido;
+}
+
+.main-contenedor .sidebar {
+  background: #3cb119;
+  grid-area: sidebar;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-contenedor .footer {
+  min-height: 50px;
+  grid-area: footer;
+}
+
+.rmgallery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.card {
+  padding: 1.5em 0.5em 0.5em;
+  border-radius: 2em;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 576px) {
+  .main-contenedor {
+    grid-template-areas:
+      "contenido contenido contenido contenido"
+      "footer footer footer footer";
+  }
+
+  .main-contenedor .sidebar {
+    display: none;
+  }
+}
+
+.rmbody01 {
+  background: white;
+  padding: 0.5em 0.5em;
+  margin: 0.5em 0.5em;
+  border-radius: 1em;
+  text-align: center;
+  color: blue;
+}

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card-deck">
+  {% for obra in obras %}
+    <div class="card mb-4">
+      <div class="card-body">
+        <a
+              href="{% url 'obra_detail' pk=obra.id %}"
+              class="text-dark text-decoration-none"
+              ><h3>{{obra.nombre_obra}}</h3></a
+            >
+            <p>Monto de contrato: {{obra.monto_contrato}}</p>
+      </div>
+    </div>
+	{% endfor %}
+  </div>
+</div>
